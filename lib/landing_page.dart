@@ -49,21 +49,21 @@ class landingPage extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(8, 8, 8, 3),
             child: SizedBox(
               width: double.infinity,
-              child: emptyButton(text: 'Continue with Email', onTap: (){}, icon: 'Logos.google_gmail')),
+              child: emptyButton(text: 'Continue with Email', onTap: (){ Navigator.pushReplacementNamed(context, '/navbar');}, icon: 'assets/mail.jpg')),
           ),
       
           Padding(
             padding: const EdgeInsets.fromLTRB(8, 3, 8, 3),
             child: SizedBox(
               width: double.infinity,
-              child: emptyButton(text: 'Continue with Google', onTap: (){}, icon: 'Logos.google_gmail')),
+              child: emptyButton(text: 'Continue with Google', onTap: (){ Navigator.pushReplacementNamed(context, '/navbar');}, icon: 'assets/google.jpg')),
           ),
       
           Padding(
             padding: const EdgeInsets.fromLTRB(8, 3, 8, 3),
             child: SizedBox(
               width: double.infinity,
-              child: emptyButton(text: 'Continue with Apple', onTap: (){}, icon: 'Logos.google_gmail')),
+              child: emptyButton(text: 'Continue with Apple', onTap: (){ Navigator.pushReplacementNamed(context, '/navbar');}, icon: 'assets/Apple.jpg')),
           ),
 
           SizedBox(
@@ -73,8 +73,8 @@ class landingPage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Don\'t have an account ?'  ),
-              TextButton(onPressed: (){}, child: Text('Sign up ', style: TextStyle(fontWeight: FontWeight.bold , color: Color(0xff50A5AE)),))
+              Text('Already have an account ?'  ),
+              TextButton(onPressed: (){Navigator.pushNamed(context, '/login');}, child: Text('Sign in ', style: TextStyle(fontWeight: FontWeight.bold , color: Color(0xff50A5AE)),))
             ],
             
           ),

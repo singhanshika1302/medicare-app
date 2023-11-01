@@ -24,7 +24,8 @@ class emptyButton extends StatelessWidget {
          child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
            children: [
-             Iconify(icon),
+             Image.asset(icon),
+             SizedBox(width: 5,),
              Text(text,style: TextStyle(color:Colors.black),),
            ],
          ),
