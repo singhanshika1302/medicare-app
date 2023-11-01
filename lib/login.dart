@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:medicare_app/utilis/mytextfield.dart';
+import 'package:medicare_app/utilis/solidButtton.dart';
 
 
 class login extends StatefulWidget {
@@ -108,49 +109,65 @@ Expanded(
               physics: BouncingScrollPhysics(),
               children: [
                 // Contents for the "email" tab,
-               Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 15, 0, 15),
-                    child: MyTextField(
-                                  controller: usernameController,
-                                  hintText: 'Username',
-                                  obscureText: false,
-                                ),
-                  ),
-
-              const SizedBox(height: 10),
-
-              // password textfield
-              MyTextField(
-                controller: passwordController,
-                hintText: 'Password',
-                obscureText: true,
-              ),
-
-              const SizedBox(height: 10),
-
-              // forgot password?
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+               SingleChildScrollView(
+                 child: Column(
                   children: [
-                    Text(
-                      'Forgot Password?',
-                      style: TextStyle(color: Colors.grey[600]),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 15, 0, 15),
+                      child: MyTextField(
+                                    controller: usernameController,
+                                    hintText: 'Username',
+                                    obscureText: false,
+                                  ),
                     ),
+               
+                             const SizedBox(height: 10),
+               
+                             // password textfield
+                             MyTextField(
+                  controller: passwordController,
+                  hintText: 'Password',
+                  obscureText: true,
+                             ),
+               
+                             const SizedBox(height: 10),
+               
+                             // forgot password?
+                             Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        'Forgot Password?',
+                        style: TextStyle(color: Color(0xff99004C)),
+                      ),
+                    ],
+                  ),
+                             ),
+                             Padding(
+                               padding: const EdgeInsets.all(15.0),
+                               child: solidbutton(text: 'Sign In', onTap: (){}),
+                             )
                   ],
-                ),
-              ),
-                ],
-
+               
+                 ),
                ),
  // Contents for the "phone" tab
                 Center(child: Text('Email')),
 ],
             ),
-          )
+          ),
+          
+
+          Padding(
+            
+            
+            padding: const EdgeInsets.all(8.0),
+            
+            child: Text('or Sign In with'),
+          ),
+          
         ],
     ));
   }

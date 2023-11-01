@@ -2,14 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
-import 'package:colorful_iconify_flutter/icons/logos.dart';
 
-class emptyButton extends StatelessWidget {
+
+class solidbutton extends StatelessWidget {
 
   final String text ;
-  final String icon ;
+  
   void Function()? onTap;
-  emptyButton({super.key , required this.text, required this.onTap , required this.icon,});
+  solidbutton({super.key , required this.text, required this.onTap , });
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +24,8 @@ class emptyButton extends StatelessWidget {
          child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
            children: [
-             Iconify(icon),
-             Text(text,style: TextStyle(color:Colors.black),),
+             
+             Text(text,style: TextStyle(color:Colors.white),),
            ],
          ),
        ),
@@ -41,13 +41,13 @@ class emptyButton extends StatelessWidget {
             borderRadius:
                 BorderRadius.circular(15.0), // Adjust the border radius
             side: BorderSide(
-              color: Colors.black,
+              color: Color(0xff50A5AE),
               width: 1, // Adjust the border width
             ),
           ),
         ),
         backgroundColor: MaterialStateProperty.all<Color>(
-          Colors.white
+          Color(0xff50A5AE)
         ),
       ),
     );
