@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicare_app/utilis/doctorpage_card.dart';
 
 class Doctor_page extends StatelessWidget {
   const Doctor_page({super.key});
@@ -6,7 +7,15 @@ class Doctor_page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text('Doctor')),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: Text('Doctor'),
+        centerTitle: true,
+      ),
+      body: DoctorProduct_card(),
+      
+      
+      
     );
   }
 }
